@@ -35,7 +35,7 @@ if( process.env.DATABASE_URL ){
   configs = {
     user: 'changhaoteo',
     host: '127.0.0.1',
-    database: 'mvc-pair',
+    database: 'q-tea',
     port: 5432
   };
 }
@@ -66,7 +66,8 @@ pool.on('error', function (err) {
 
 // const pokemonModelsObject = allPokemonModelsFunction( pool );
 
-
+  const allAdminModelsFunction = require('./models/admin');
+  const adminModelsObject = allAdminModelsFunction(pool);
 
 /*
  * ===================================================
@@ -96,4 +97,5 @@ module.exports = {
 
   // users: userModelsObject,
   // pokemon: pokemonModelsObject
+  admin: adminModelsObject
 };

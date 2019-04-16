@@ -1,0 +1,20 @@
+body {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 16px;
+  font-family: 'Quattrocento', serif;
+
+}
+
+h1, h2, h3 {
+	font-family: 'Cinzel', serif;
+}
+
+.homepage-buttons a {
+	color: white;
+	text-decoration: none;
+}
+
+.bbt-gallery p {
+	text-align: center;
+}
