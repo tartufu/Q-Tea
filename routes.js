@@ -31,4 +31,9 @@ module.exports = (app, allModels) => {
   // THIS ROUTE IS THE ADMIN BACKEND PAGE
   const adminPageCallbacks = require('./controllers/admin') (allModels);
   app.get('/admin/tasks', adminPageCallbacks.adminpage);
+
+  // THIS ROUTE SHOWS YOUR ORDER
+  const orderSearchCallbacks = require('./controllers/search') (allModels);
+  app.get('/search', orderSearchCallbacks.index);
+  app.post('/search', orderSearchCallbacks.order);
 };

@@ -8,4 +8,4 @@ INSERT INTO orders (order_no, order_detail, qty, pickup_time, status) VALUES ('O
 
 INSERT INTO orders (order_no, order_detail, qty, pickup_time, status) VALUES ('OD0003', 'Bubble Tea C', 2, '6pm', 'pending');
 
-INSERT INTO orders (order_no, order_detail, qty, pickup_time, status) VALUES ('OD0004', 'Bubble Tea A', 1, '9am', 'pending');
+INSERT INTO orders (order_no, order_detail, qty, pickup_time, status) VALUES ('OD0004', 'Bubble Tea A', 1, '12pm', 'pending');
