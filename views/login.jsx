@@ -1,5 +1,7 @@
 var React = require("react");
 var Header = require('./header');
+var Navbar = require('./navbar');
+
 
 class Login extends React.Component {
   render() {
@@ -15,7 +17,9 @@ class Login extends React.Component {
     return (
       <html>
         <Header/>
+        <Navbar/>
         <body>
+          <br/> <br/>
           <h3>Admin Login</h3>
             <form method="post" action="/admin">
             <label for="id">Username</label>

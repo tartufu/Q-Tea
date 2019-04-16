@@ -1,5 +1,6 @@
 var React = require("react");
 var Header = require('./header');
+var Navbar = require('./Navbar');
 
 class Login extends React.Component {
   render() {
@@ -34,15 +35,10 @@ class Login extends React.Component {
     return (
       <html>
         <Header/>
+        <Navbar/>
         <body>
-          <h3>Order Search</h3>
-            <form method="post" action="/search">
-            <label for="id">Order No</label>
-            <input type="text" name="order_no"/>
-            <input type="submit" value="Submit"/>
-          </form>
-          <hr/>
-
+          <br/><br/>
+          <h3> ORDER STATUS </h3>
           <p> {errorMsg} </p>
           {orderSearch()}
 
@@ -53,3 +49,12 @@ class Login extends React.Component {
 }
 
 module.exports = Login;
+
+
+          // <h3>Order Search</h3>
+          //   <form method="post" action="/search">
+          //   <label for="id">Order No</label>
+          //   <input type="text" name="order_no"/>
+          //   <input type="submit" value="Submit"/>
+          // </form>
+          // <hr/>

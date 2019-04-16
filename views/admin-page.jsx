@@ -14,7 +14,6 @@ class Login extends React.Component {
                 <br/>
         </div>
 
-    let error = this.props.unknown;
     });
 
     // let orderNum = this.props.ccb[0].order_no;
@@ -28,7 +27,6 @@ class Login extends React.Component {
         <Header/>
         <body>
           <h3>Admin BACKEND AND LIST OF TASKS!</h3>
-          {error}
           {orders}
         </body>
       </html>

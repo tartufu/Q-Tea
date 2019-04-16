@@ -1,5 +1,6 @@
- var React = require("react");
+var React = require("react");
 var Header = require('./header');
+var Navbar = require('./navbar');
 
 class Home extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class Home extends React.Component {
       <html>
         <Header/>
         <body>
+          <Navbar />
           <div class="homepage">
               <h1 class="text-center">Q-Tea</h1>
               <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

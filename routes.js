@@ -36,4 +36,11 @@ module.exports = (app, allModels) => {
   const orderSearchCallbacks = require('./controllers/search') (allModels);
   app.get('/search', orderSearchCallbacks.index);
   app.post('/search', orderSearchCallbacks.order);
+
+  //THIS ROUTE SHOWS ABOUT US PAGE
+  const aboutCallbacks = require('./controllers/about') (allModels);
+  app.get('/about', aboutCallbacks.index);
+
+  const contactCallbacks = require('./controllers/contact') (allModels);
+  app.get('/contact', contactCallbacks.index);
 };
