@@ -14,10 +14,6 @@ module.exports = (app, allModels) => {
    */
 
   // require the controller
-  // const pokemonControllerCallbacks = require('./controllers/pokemon')(allModels);
-
-  // app.get('/pokemons', pokemonControllerCallbacks.index);
-  //app.get('/pokemons/:id', pokemons.getPokemon);
 
   // THIS ROUTE IS THE HOMEPAGE
   const homepageCallbacks = require('./controllers/homepage') (allModels);
@@ -41,6 +37,14 @@ module.exports = (app, allModels) => {
   const aboutCallbacks = require('./controllers/about') (allModels);
   app.get('/about', aboutCallbacks.index);
 
+  //THIS ROUTE SHOWS CONTACT PAGE
   const contactCallbacks = require('./controllers/contact') (allModels);
   app.get('/contact', contactCallbacks.index);
+
+
+  // THIS FORM TRACKS THE ORDERS FROM HOMEPAGE
+  const formOrderCallbacks = require('./controllers/formorder') (allModels);
+  app.post('/formorder', formOrderCallbacks.index);
+  app.get('/formorder', formOrderCallbacks.index);
+
 };

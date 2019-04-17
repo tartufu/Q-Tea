@@ -6,33 +6,22 @@ class Login extends React.Component {
 
     let orders = this.props.ccb.map (order => {
         return <div>
-                <p> Order Num: {order.order_no} </p>
-                <p> Ref Num: {order.ref_no} </p>
-                <p> Order Details: {order.order_detail}</p>
-                <p> Qty : {order.qty}</p>
-                <p> Pickup Time: {order.pickup_time}</p>
-                <p> Payment: {order.payment} </p>
-                <p> Fulfilment: {order.fulfilment}</p>
-                <p> Contact: {order.contact}</p>
-
-
-    <tr>
-      <th scope="row">qwedqwed</th>
-      <td>wdqwdqwdqw</td>
-      <td>Otto</td>
-      <td>@mdsdfo</td>
-      <td>@msdsvddo</td>
-      <td>@mdo</td>
-      <td>@mdx z zo</td>
-      <td>@zerwdmdo</td>
+        <tr>
+      <th scope="row">{order.order_no} </th>
+      <td>{order.ref_no}</td>
+      <td>{order.order_detail}</td>
+      <td>{order.qty}</td>
+      <td>{order.pickup_time}</td>
+      <td>{order.payment}</td>
+      <td>{order.fulfilment}</td>
+      <td>{order.contact}</td>
     </tr>
 
-                <br/>
-        </div>
+    </div>
     });
 
-let orderNumber = this.props.ccb[0].order_no;
-let refNum = this.props.ccb[0].ref_no;
+// let orderNumber = this.props.ccb[0].order_no;
+// let refNum = this.props.ccb[0].ref_no;
 
     // let orderNum = this.props.ccb[0].order_no;
     // let orderDetails = this.props.ccb[0].order_detail;
@@ -53,35 +42,14 @@ let refNum = this.props.ccb[0].ref_no;
       <th scope="col">Ref No</th>
       <th scope="col">Order Detail</th>
       <th scope="col">Qty</th>
-      <th scope="col">Pickup Time</th>
+      <th scope="col">Pickup</th>
       <th scope="col">Payment</th>
       <th scope="col">Fulfilment</th>
       <th scope="col">Contact</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">{orderNumber}</th>
-      <td>{refNum}</td>
-      <td>Otto</td>
-      <td>@mdsdfo</td>
-      <td>@msdsvddo</td>
-      <td>@mdo</td>
-      <td>@mdx z zo</td>
-      <td>@zerwdmdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+          {orders}
   </tbody>
 </table>
 
@@ -92,7 +60,6 @@ let refNum = this.props.ccb[0].ref_no;
 
 
 
-          {orders}
         </body>
       </html>
     );
@@ -100,3 +67,15 @@ let refNum = this.props.ccb[0].ref_no;
 }
 
 module.exports = Login;
+
+
+    // <tr>
+    //   <td> </td>
+    //   <td> </td>
+    //   <td> </td>
+    //   <td> </td>
+    //   <td> </td>
+    //   <td> PAID </td>
+    //   <td> FULFILLED </td>
+    //   <td> VOID</td>
+    // </tr>

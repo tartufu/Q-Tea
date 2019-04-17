@@ -27,44 +27,88 @@ class Home extends React.Component {
 
               <hr/>
 
-              <div class="row bbt-gallery">
-                <div class="col-md-4"> <p>Bubble Tea A </p></div>
-                <div class="col-md-4"> <p>Bubble Tea B </p></div>
-                <div class="col-md-4"> <p>Bubble Tea C </p></div>
+
+            <h2 class="text-center">Bubble Tea Order Form</h2>
+            <form method="POST" action="/formorder">
+              <div class="form-group">
+                <input type="hidden" class="form-control" id="exampleFormControlInput1" Value="Bubble Tea A" name="Bubble Tea"/>
+                <label for="exampleFormControlSelect1">Bubble Tea A</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="A">
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
               </div>
-              <br/> <br/>
 
+              <div class="form-group">
+                <input type="hidden" class="form-control" id="exampleFormControlInput1" Value="Bubble Tea B" name="Bubble Tea B"/>
+                <label for="exampleFormControlSelect1">Bubble Tea B</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="B">
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </div>
 
-              <form>
+              <div class="form-group">
+                 <input type="hidden" class="form-control" id="exampleFormControlInput1" Value="Bubble Tea C" name="Bubble Tea C"/>
+                <label for="exampleFormControlSelect1">Bubble Tea C</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="C">
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </div>
+
               <div class="form-row">
-                <div class="col-10">
-                  <input type="text" class="form-control" placeholder="City"/>
-                </div>
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Qty"/>
-                </div>
+
+              <div class="form-group col-md-6">
+                <label for="exampleFormControlInput1">Pick Up Date</label>
+                <input type="date" class="form-control" id="exampleFormControlInput1" name="D"/>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="exampleFormControlSelect1">Pick Up Time</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="E">
+                  <option>8am - 9am</option>
+                  <option>12pm - 1pm</option>
+                  <option>6pm - 7pm</option>
+                </select>
               </div>
 
-              <div class="form-row">
-                <div class="col-10">
-                  <input type="text" class="form-control" placeholder="City"/>
-                </div>
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Qty"/>
-                </div>
               </div>
 
-              <div class="form-row">
-                <div class="col-10">
-                  <input type="text" class="form-control" placeholder="City"/>
-                </div>
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Qty"/>
-                </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Contact Number</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="six"/>
               </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
 
             </form>
-
 
           </div>
         </body>
@@ -79,4 +123,10 @@ module.exports = Home;
               // <div class="homepage-buttons">
               //     <button type="button" class="btn btn-primary btn-lg mr-2"> <a href="/login">Login as User </a></button>
               //     <button type="button" class="btn btn-secondary btn-lg"><a href="/register">Create New Account</a></button>
+              // </div>
+
+
+              //               <div class="form-group">
+              //   <label for="exampleFormControlInput1">Email address</label>
+              //   <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
               // </div>
