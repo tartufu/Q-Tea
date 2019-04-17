@@ -33,7 +33,7 @@ module.exports = (db) => {
             response.cookie('loggedin', true);
             // response.send('logged in')
             response.redirect('admin/tasks');
-            cos
+
         };
 
       });
