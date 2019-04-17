@@ -1,8 +1,5 @@
 module.exports = (db) => {
 
-
-
-
   /**
    * ===========================================
    * Controller logic
@@ -33,6 +30,8 @@ module.exports = (db) => {
         if (result === null) {
             response.send('login failure');
         } else if (data.username === result[0].username && data.password === result[0].password) {
+            response.cookie('loggedin', true);
+            // response.send('logged in')
             response.redirect('admin/tasks');
         };
 
@@ -43,13 +42,20 @@ module.exports = (db) => {
 
     let adminPageControllerCallback = (request, response) => {
 
+        console.log(request.cookies);
+        if (request.cookies.loggedin) {
+            console.log("LOLOKLOLC");
+            db.admin.tasks((error, result) => {
 
-        db.admin.tasks((error, result) => {
+                let data = { ccb: result }
+                response.render('admin-page', data);
+          });
+        } else {
+                    response.send("ERROR");
 
-            let data = { ccb: result }
-            response.render('admin-page', data);
-            console.log(data.ccb[0].order_no);
-      });
+        }
+
+
   };
 
   /**

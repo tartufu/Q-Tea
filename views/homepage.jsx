@@ -2,6 +2,26 @@ var React = require("react");
 var Header = require('./header');
 var Navbar = require('./navbar');
 
+
+var randomstring = require("randomstring");
+var testString = randomstring.generate({
+  length: 4,
+  charset: 'alphabetic'
+});
+
+var testNumber = randomstring.generate({
+  length: 4,
+  charset: 'numeric'
+});
+
+testString = testString.toUpperCase();
+console.log(testString);
+console.log(testNumber);
+
+let refNum = testString + testNumber;
+console.log(refNum);
+
+
 class Home extends React.Component {
   render() {
 
