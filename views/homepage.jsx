@@ -15,8 +15,8 @@ var testNumber = randomstring.generate({
 });
 
 testString = testString.toUpperCase();
-console.log(testString);
-console.log(testNumber);
+// console.log(testString);
+// console.log(testNumber);
 
 let refNum = testString + testNumber;
 console.log(refNum);
@@ -51,46 +51,18 @@ class Home extends React.Component {
             <h2 class="text-center">Bubble Tea Order Form</h2>
             <form method="POST" action="/formorder">
               <div class="form-group">
-                <input type="hidden" class="form-control" id="exampleFormControlInput1" Value="Bubble Tea A" name="Bubble Tea"/>
-                <label for="exampleFormControlSelect1">Bubble Tea A</label>
-                <select class="form-control" id="exampleFormControlSelect1" name="A">
-                  <option>0</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
-                </select>
-              </div>
 
-              <div class="form-group">
-                <input type="hidden" class="form-control" id="exampleFormControlInput1" Value="Bubble Tea B" name="Bubble Tea B"/>
-                <label for="exampleFormControlSelect1">Bubble Tea B</label>
-                <select class="form-control" id="exampleFormControlSelect1" name="B">
-                  <option>0</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
-                </select>
-              </div>
+                <input type="text" class="form-control" name="ref_no" value={refNum} hidden/>
 
-              <div class="form-group">
-                 <input type="hidden" class="form-control" id="exampleFormControlInput1" Value="Bubble Tea C" name="Bubble Tea C"/>
-                <label for="exampleFormControlSelect1">Bubble Tea C</label>
-                <select class="form-control" id="exampleFormControlSelect1" name="C">
-                  <option>0</option>
+                <label for="exampleFormControlSelect1">Bubble Tea Type</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="order_detail">
+                  <option>Bubble Tea A</option>
+                  <option>Bubble Tea B</option>
+                  <option>Bubble Tea C</option>
+                </select> <br/>
+
+                <label for="exampleFormControlSelect1">Bubble Tea Qty</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="qty">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -108,11 +80,11 @@ class Home extends React.Component {
 
               <div class="form-group col-md-6">
                 <label for="exampleFormControlInput1">Pick Up Date</label>
-                <input type="date" class="form-control" id="exampleFormControlInput1" name="D"/>
+                <input type="date" class="form-control" id="exampleFormControlInput1" name="pickup_date" required/>
               </div>
               <div class="form-group col-md-6">
                 <label for="exampleFormControlSelect1">Pick Up Time</label>
-                <select class="form-control" id="exampleFormControlSelect1" name="E">
+                <select class="form-control" id="exampleFormControlSelect1" name="pickup_time">
                   <option>8am - 9am</option>
                   <option>12pm - 1pm</option>
                   <option>6pm - 7pm</option>
@@ -123,7 +95,15 @@ class Home extends React.Component {
 
               <div class="form-group">
                 <label for="exampleFormControlInput1">Contact Number</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="six"/>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="contact" required/>
+              </div>
+
+                <input type="text" class="form-control" name="payment" value="unpaid" hidden/>
+                <input type="text" class="form-control" name="fulfilment" value="pending" hidden/>
+
+
+              <div>
+                <p> For large orders please contact us <a href="/contact">here</a> or drop us a text at +65 9123 4567!</p>
               </div>
 
               <button type="submit" class="btn btn-primary">Submit</button>
@@ -140,13 +120,83 @@ class Home extends React.Component {
 module.exports = Home;
 
 
-              // <div class="homepage-buttons">
-              //     <button type="button" class="btn btn-primary btn-lg mr-2"> <a href="/login">Login as User </a></button>
-              //     <button type="button" class="btn btn-secondary btn-lg"><a href="/register">Create New Account</a></button>
-              // </div>
+            // <form method="POST" action="/formorder">
+            //   <div class="form-group">
+            //     <input type="hidden" class="form-control" id="exampleFormControlInput1" Value="Bubble Tea A" name="Bubble Tea"/>
+            //     <label for="exampleFormControlSelect1">Bubble Tea A</label>
+            //     <select class="form-control" id="exampleFormControlSelect1" name="A">
+            //       <option>0</option>
+            //       <option>1</option>
+            //       <option>2</option>
+            //       <option>3</option>
+            //       <option>4</option>
+            //       <option>5</option>
+            //       <option>6</option>
+            //       <option>7</option>
+            //       <option>8</option>
+            //       <option>9</option>
+            //       <option>10</option>
+            //     </select>
+            //   </div>
 
+            //   <div class="form-group">
+            //     <input type="hidden" class="form-control" id="exampleFormControlInput1" Value="Bubble Tea B" name="Bubble Tea B"/>
+            //     <label for="exampleFormControlSelect1">Bubble Tea B</label>
+            //     <select class="form-control" id="exampleFormControlSelect1" name="B">
+            //       <option>0</option>
+            //       <option>1</option>
+            //       <option>2</option>
+            //       <option>3</option>
+            //       <option>4</option>
+            //       <option>5</option>
+            //       <option>6</option>
+            //       <option>7</option>
+            //       <option>8</option>
+            //       <option>9</option>
+            //       <option>10</option>
+            //     </select>
+            //   </div>
 
-              //               <div class="form-group">
-              //   <label for="exampleFormControlInput1">Email address</label>
-              //   <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-              // </div>
+            //   <div class="form-group">
+            //      <input type="hidden" class="form-control" id="exampleFormControlInput1" Value="Bubble Tea C" name="Bubble Tea C"/>
+            //     <label for="exampleFormControlSelect1">Bubble Tea C</label>
+            //     <select class="form-control" id="exampleFormControlSelect1" name="C">
+            //       <option>0</option>
+            //       <option>1</option>
+            //       <option>2</option>
+            //       <option>3</option>
+            //       <option>4</option>
+            //       <option>5</option>
+            //       <option>6</option>
+            //       <option>7</option>
+            //       <option>8</option>
+            //       <option>9</option>
+            //       <option>10</option>
+            //     </select>
+            //   </div>
+
+            //   <div class="form-row">
+
+            //   <div class="form-group col-md-6">
+            //     <label for="exampleFormControlInput1">Pick Up Date</label>
+            //     <input type="date" class="form-control" id="exampleFormControlInput1" name="D"/>
+            //   </div>
+            //   <div class="form-group col-md-6">
+            //     <label for="exampleFormControlSelect1">Pick Up Time</label>
+            //     <select class="form-control" id="exampleFormControlSelect1" name="E">
+            //       <option>8am - 9am</option>
+            //       <option>12pm - 1pm</option>
+            //       <option>6pm - 7pm</option>
+            //     </select>
+            //   </div>
+
+            //   </div>
+
+            //   <div class="form-group">
+            //     <label for="exampleFormControlInput1">Contact Number</label>
+            //     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="six"/>
+            //   </div>
+
+            //   <button type="submit" class="btn btn-primary">Submit</button>
+
+            // </form>

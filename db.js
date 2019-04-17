@@ -61,16 +61,14 @@ pool.on('error', function (err) {
  * ===================================================
  */
 
-
-// const allPokemonModelsFunction = require('./models/pokemon');
-
-// const pokemonModelsObject = allPokemonModelsFunction( pool );
-
   const allAdminModelsFunction = require('./models/admin');
   const adminModelsObject = allAdminModelsFunction(pool);
 
   const allSearchModelsFunction = require('./models/search');
   const searchModelsObject = allSearchModelsFunction(pool);
+
+  const allReceiptModelsFunction = require('./models/receipt');
+  const receiptModelsObject = allReceiptModelsFunction(pool);
 
 /*
  * ===================================================
@@ -101,5 +99,6 @@ module.exports = {
   // users: userModelsObject,
   // pokemon: pokemonModelsObject
   admin: adminModelsObject,
-  search: searchModelsObject
+  search: searchModelsObject,
+  receipt: receiptModelsObject
 };

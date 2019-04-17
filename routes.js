@@ -47,4 +47,7 @@ module.exports = (app, allModels) => {
   app.post('/formorder', formOrderCallbacks.index);
   app.get('/formorder', formOrderCallbacks.index);
 
+  // THIS FORM SHOWS CONFIRMATION ORDER
+  const receiptCallbacks = require('./controllers/receipt') (allModels);
+  app.post('/formorder/receipt', receiptCallbacks.index);
 };

@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS orders (
 	ref_no TEXT,
 	order_detail TEXT,
 	qty INTEGER,
+	pickup_date DATE,
 	pickup_time TEXT,
 	payment TEXT,
 	fulfilment TEXT,

@@ -11,6 +11,7 @@ class Login extends React.Component {
       <td>{order.ref_no}</td>
       <td>{order.order_detail}</td>
       <td>{order.qty}</td>
+      <td>{order.pickup_date.toDateString()}</td>
       <td>{order.pickup_time}</td>
       <td>{order.payment}</td>
       <td>{order.fulfilment}</td>
@@ -18,6 +19,15 @@ class Login extends React.Component {
     </tr>
 
     </div>
+    });
+
+     let testOrders = this.props.ccb.map (order => {
+
+        if (order.payment === 'unpaid') {
+            return <div>
+                <p> {order.order_no} </p>
+            </div>
+        }
     });
 
 // let orderNumber = this.props.ccb[0].order_no;
@@ -42,7 +52,8 @@ class Login extends React.Component {
       <th scope="col">Ref No</th>
       <th scope="col">Order Detail</th>
       <th scope="col">Qty</th>
-      <th scope="col">Pickup</th>
+      <th scope="col">Pickup Date</th>
+      <th scope="col">Pickup Time</th>
       <th scope="col">Payment</th>
       <th scope="col">Fulfilment</th>
       <th scope="col">Contact</th>
@@ -55,7 +66,7 @@ class Login extends React.Component {
 
 
 
-
+        {testOrders}
 
 
 

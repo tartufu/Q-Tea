@@ -33,6 +33,7 @@ module.exports = (db) => {
             response.cookie('loggedin', true);
             // response.send('logged in')
             response.redirect('admin/tasks');
+            cos
         };
 
       });
@@ -49,6 +50,7 @@ module.exports = (db) => {
 
                 let data = { ccb: result }
                 response.render('admin-page', data);
+                console.log(data.pickup_date);
           });
         } else {
                     response.send("ERROR");

@@ -25,6 +25,10 @@ class Navbar extends React.Component {
         <a class="nav-link" href="/contact">Contact</a>
       </li>
 
+      <li class="nav-item active">
+        <a class="nav-link" href="/contact">Login</a>
+      </li>
+
     </ul>
     <form class="form-inline my-2 my-lg-0" method="POST" action="/search">
       <input class="form-control mr-sm-2" type="search" placeholder="Order Search" aria-label="Search" name="ref_no"/>
