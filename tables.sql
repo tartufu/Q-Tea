@@ -1,10 +1,13 @@
 CREATE TABLE IF NOT EXISTS orders (
 	id SERIAL PRIMARY KEY,
 	order_no TEXT,
+	ref_no TEXT,
 	order_detail TEXT,
 	qty INTEGER,
 	pickup_time TEXT,
-	status TEXT
+	payment TEXT,
+	fulfilment TEXT,
+	contact INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS admin (

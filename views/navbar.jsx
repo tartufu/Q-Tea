@@ -27,7 +27,7 @@ class Navbar extends React.Component {
 
     </ul>
     <form class="form-inline my-2 my-lg-0" method="POST" action="/search">
-      <input class="form-control mr-sm-2" type="search" placeholder="Order Search" aria-label="Search" name="order_no"/>
+      <input class="form-control mr-sm-2" type="search" placeholder="Order Search" aria-label="Search" name="ref_no"/>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>

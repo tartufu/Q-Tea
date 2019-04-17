@@ -14,20 +14,22 @@ class Login extends React.Component {
     //                         });
 
     let orderNum = this.props.order_no;
+    let refNum = this.props.ref_no
     let orderDetails = this.props.order_detail;
     let qty = this.props.qty;
     let pickupTime = this.props.pickup_time;
-    let orderStatus = this.props.status;
+    let payment = this.props.payment;
+    let fulfilment = this.props.fulfilment;
+    let contact = this.props.contact;
 
     let errorMsg = this.props.error;
 
     let orderSearch = function (){
             return <div>
-          <p> Order Num: {orderNum} </p>
+          <p> Ref Num: {refNum} </p>
           <p> Order Details: {orderDetails} </p>
           <p> Qty: {qty} </p>
           <p> Pickup Time: {pickupTime} </p>
-          <p> Order Status: {orderStatus} </p>
         </div>
     }
 

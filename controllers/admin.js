@@ -45,7 +45,7 @@ module.exports = (db) => {
 
             let data = { ccb: result }
             response.render('admin-page', data);
-            console.log(data);
+            console.log(data.ccb[0].order_no);
       });
   };
 
