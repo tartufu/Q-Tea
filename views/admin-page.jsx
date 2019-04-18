@@ -21,14 +21,14 @@ class Login extends React.Component {
     </div>
     });
 
-     let testOrders = this.props.ccb.map (order => {
+    //  let testOrders = this.props.ccb.map (order => {
 
-        if (order.payment === 'unpaid') {
-            return <div>
-                <p> {order.order_no} </p>
-            </div>
-        }
-    });
+    //     if (order.payment === 'unpaid') {
+    //         return <div>
+    //             <p> {order.order_no} </p>
+    //         </div>
+    //     }
+    // });
 
 // let orderNumber = this.props.ccb[0].order_no;
 // let refNum = this.props.ccb[0].ref_no;
@@ -44,6 +44,31 @@ class Login extends React.Component {
         <Header/>
         <body>
           <h3>Admin BACKEND AND LIST OF TASKS!</h3>
+
+          <form method="POST" action="/admin/update">
+            <label for="Order">Order No</label>
+            <input type="text" name="order_no"/>
+                  <br/>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="payment"value="paid"/>
+                  <label class="form-check-label" for="exampleRadios1">Payment Made </label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="fulfilment" value="fulfilled"/>
+                  <label class="form-check-label" for="exampleRadios2"> Order Fulfilled </label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="fulfilment" value="void" />
+                  <label class="form-check-label" for="exampleRadios3"> Order Cancel </label>
+                </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+          <br/>
 
 <table class="table table-striped">
   <thead class="thead-dark ">
@@ -66,7 +91,7 @@ class Login extends React.Component {
 
 
 
-        {testOrders}
+
 
 
 

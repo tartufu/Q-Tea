@@ -28,6 +28,10 @@ module.exports = (app, allModels) => {
   const adminPageCallbacks = require('./controllers/admin') (allModels);
   app.get('/admin/tasks', adminPageCallbacks.adminpage);
 
+  // THIS ROUTE UPDATES FROM BACKEND
+  const adminUpdateCallbacks = require('./controllers/adminupdate') (allModels);
+  app.post('/admin/update', adminUpdateCallbacks.index);
+
   // THIS ROUTE SHOWS YOUR ORDER
   const orderSearchCallbacks = require('./controllers/search') (allModels);
   app.get('/search', orderSearchCallbacks.index);

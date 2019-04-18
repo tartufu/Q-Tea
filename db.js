@@ -64,6 +64,10 @@ pool.on('error', function (err) {
   const allAdminModelsFunction = require('./models/admin');
   const adminModelsObject = allAdminModelsFunction(pool);
 
+
+  const allAdminUpdateModelsFunction = require('./models/adminupdate');
+  const adminUpdateModelsObject = allAdminUpdateModelsFunction(pool);
+
   const allSearchModelsFunction = require('./models/search');
   const searchModelsObject = allSearchModelsFunction(pool);
 
@@ -99,6 +103,7 @@ module.exports = {
   // users: userModelsObject,
   // pokemon: pokemonModelsObject
   admin: adminModelsObject,
+  adminupdate: adminUpdateModelsObject,
   search: searchModelsObject,
   receipt: receiptModelsObject
 };
