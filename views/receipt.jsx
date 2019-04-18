@@ -6,15 +6,27 @@ var Navbar = require('./navbar');
 class Receipt extends React.Component {
   render() {
 
-    // let contact = this.props.ccb[0].contact;
-    // let refNum = this.props.ccb[0].ref_no;
-    // let tweets = this.props.ccb.map(tweet => {
-    //                           return <div>
-    //                           <h3>User Id {tweet.user_id}</h3>
-    //                           <p>{tweet.username}</p>
-    //                           <p>{tweet.tweets}</p>
-    //                           </div>
-    //                         });
+
+
+        // let data = {
+        //     refNum: request.body.ref_no,
+        //     orderDetail: request.body.order_detail,
+        //     qty: request.body.qty,
+        //     pickupDate: request.body.pickup_date,
+        //     pickupTime: request.body.pickup_time,
+        //     contact: request.body.contact,
+        //     payment: request.body.payment,
+        //     fulfilment: request.body.fulfilment,
+        //     contact: request.body.contact
+        // }
+
+
+    let refNum = this.props.refNum;
+    let orderDetail = this.props.orderDetail;
+    let qty = this.props.qty;
+    let pickupDate = this.props.pickupDate;
+    let pickupTime = this.props.pickupTime;
+
 
     return (
       <html>
@@ -26,6 +38,14 @@ class Receipt extends React.Component {
 
               <hr/>
 
+              <h2> Ref No: {refNum} </h2>
+              <p> Order Details: {orderDetail} </p>
+              <p> Qty: {qty}</p>
+              <p> pickupDate: {pickupDate} </p>
+              <p> Pickup Time: {pickupTime} </p>
+              <br/>
+
+              <p> Please make payment via PayLah to +65 9123 4567 for the staff to start preparing your order!</p>
           </div>
         </body>
       </html>

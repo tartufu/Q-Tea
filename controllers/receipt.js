@@ -32,7 +32,9 @@ module.exports = (db) => {
 
         db.receipt.getAll( data, (error, result) => {
         // console.log(result[0]);
-        response.render('receipt', result)
+
+        console.log(data);
+        response.render('receipt', data)
         // console.log(request.body);
         // response.send(request.body);
       });

@@ -17,6 +17,7 @@ class Login extends React.Component {
     let refNum = this.props.ref_no
     let orderDetails = this.props.order_detail;
     let qty = this.props.qty;
+    let pickupDate = this.props.pickup_date.toDateString();
     let pickupTime = this.props.pickup_time;
     let payment = this.props.payment;
     let fulfilment = this.props.fulfilment;
@@ -29,6 +30,7 @@ class Login extends React.Component {
           <p> Ref Num: {refNum} </p>
           <p> Order Details: {orderDetails} </p>
           <p> Qty: {qty} </p>
+          <p> Pickup Date: {pickupDate} </p>
           <p> Pickup Time: {pickupTime} </p>
         </div>
     }
