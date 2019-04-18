@@ -6,9 +6,9 @@
 module.exports = (dbPoolInstance) => {
 
   // `dbPoolInstance` is accessible within this function scope
-  let getAll = (callback) => {
+  let getAll = (data, callback) => {
 
-    let query = `SELECT * FROM orders`;
+    let query = `INSERT INTO orders (order_no, ref_no, order_detail, qty, pickup_date, pickup_time, payment, fulfilment, contact) VALUES ('${data.refNum}', '${data.refNum}', '${data.orderDetail}', ${data.qty}, '${data.pickupDate}', '${data.pickupTime}', '${data.payment}', '${data.fulfilment}', ${data.contact})`;
 
     dbPoolInstance.query(query, (error, queryResult) => {
       if( error ){

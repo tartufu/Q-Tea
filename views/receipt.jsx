@@ -6,8 +6,8 @@ var Navbar = require('./navbar');
 class Receipt extends React.Component {
   render() {
 
-    let contact = this.props.ccb[0].contact;
-    let refNum = this.props.ccb[0].ref_no;
+    // let contact = this.props.ccb[0].contact;
+    // let refNum = this.props.ccb[0].ref_no;
     // let tweets = this.props.ccb.map(tweet => {
     //                           return <div>
     //                           <h3>User Id {tweet.user_id}</h3>
@@ -26,8 +26,6 @@ class Receipt extends React.Component {
 
               <hr/>
 
-              <h2> {contact} </h2>
-              <h2> {refNum} </h2>
           </div>
         </body>
       </html>

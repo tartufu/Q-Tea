@@ -15,11 +15,24 @@ module.exports = (db) => {
         // response.send(request.body);
       // });
 
-        db.receipt.getAll((error, result) => {
+
+        let data = {
+            refNum: request.body.ref_no,
+            orderDetail: request.body.order_detail,
+            qty: request.body.qty,
+            pickupDate: request.body.pickup_date,
+            pickupTime: request.body.pickup_time,
+            contact: request.body.contact,
+            payment: request.body.payment,
+            fulfilment: request.body.fulfilment,
+            contact: request.body.contact
+        }
+
+        console.log("ADNSAIDNS "+data.orderDetail);
+
+        db.receipt.getAll( data, (error, result) => {
         // console.log(result[0]);
-        let thing = {ccb : result}
-        console.log(thing);
-        response.render('receipt', thing)
+        response.render('receipt', result)
         // console.log(request.body);
         // response.send(request.body);
       });

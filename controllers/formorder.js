@@ -11,7 +11,7 @@ module.exports = (db) => {
       //   // console.log(result[0]);
       //   let thing = {ccb : result}
         // console.log(thing);
-        console.log(request.body);
+        // console.log(request.body);
         data = request.body;
         response.render('formorder', data);
       // });
