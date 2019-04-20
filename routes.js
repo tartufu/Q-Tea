@@ -54,4 +54,9 @@ module.exports = (app, allModels) => {
   // THIS FORM SHOWS CONFIRMATION ORDER
   const receiptCallbacks = require('./controllers/receipt') (allModels);
   app.post('/formorder/receipt', receiptCallbacks.index);
+
+    // THIS FORM SHOWS USER LOGIN
+  const userLoginCallbacks = require('./controllers/userlogin') (allModels);
+  app.get('/userlogin', userLoginCallbacks.index);
+  app.post('/userlogin', userLoginCallbacks.verify);
 };

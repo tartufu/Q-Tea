@@ -74,6 +74,9 @@ pool.on('error', function (err) {
   const allReceiptModelsFunction = require('./models/receipt');
   const receiptModelsObject = allReceiptModelsFunction(pool);
 
+  const allUsersModelsFunction = require('./models/user');
+  const userModelsObject = allUsersModelsFunction(pool);
+
 /*
  * ===================================================
  * ===================================================
@@ -105,5 +108,6 @@ module.exports = {
   admin: adminModelsObject,
   adminupdate: adminUpdateModelsObject,
   search: searchModelsObject,
-  receipt: receiptModelsObject
+  receipt: receiptModelsObject,
+  user: userModelsObject
 };

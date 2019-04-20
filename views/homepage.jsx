@@ -33,6 +33,13 @@ class Home extends React.Component {
     //                           </div>
     //                         });
 
+    let username = this.props.username;
+    let loginGreeting = `What would you like to have today?`;
+
+    if (username) {
+        loginGreeting = `What would you like to have today ${username}?`;
+    };
+
     return (
       <html>
         <Header/>
@@ -46,6 +53,8 @@ class Home extends React.Component {
                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
               <hr/>
+
+              <h2 class="text-center"> {loginGreeting}</h2>
 
 
             <h2 class="text-center">Bubble Tea Order Form</h2>
@@ -97,7 +106,7 @@ class Home extends React.Component {
                 <label for="exampleFormControlInput1">Contact Number</label>
                     <div class="form-row">
                       <div class="col-1">
-                        <input type="text" class="form-control" value="+65" readonly/>
+                        <input type="text" class="form-control" value="+65" readonly="readonly"/>
                       </div>
 
                       <div class="col-11">
