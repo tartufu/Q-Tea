@@ -17,6 +17,12 @@ CREATE TABLE IF NOT EXISTS admin (
 	password TEXT
 );
 
+CREATE TABLE IF NOT EXISTS users (
+	id SERIAL PRIMARY KEY,
+	username TEXT,
+	password TEXT
+);
+
 -- CREATE TABLE IF NOT EXISTS test (
 -- 	id SERIAL PRIMARY KEY,
 -- 	user_id INTEGER,

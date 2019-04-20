@@ -2,11 +2,6 @@ var React = require("react");
 var Header = require('./header');
 var Navbar = require('./navbar');
 
-
-
-
-
-
 class Receipt extends React.Component {
   render() {
 
@@ -66,6 +61,7 @@ client.messages
               <br/>
 
               <p> Please make payment via PayLah to +65 9123 4567 for the staff to start preparing your order!</p>
+              <p> Important: Please contact us if you have not recieved a confirmation SMS with your Reference Number within 15 mins!</p>
           </div>
         </body>
       </html>

@@ -1,6 +1,10 @@
 INSERT INTO admin (username, password) VALUES ('admin', 'admin');
 
 
+INSERT INTO users (username, password) VALUES ('teo', 'teo');
+INSERT INTO users (username, password) VALUES ('chang', 'chang');
+INSERT INTO users (username, password) VALUES ('hao', 'hao');
+
 
 INSERT INTO orders (order_no, ref_no, order_detail, qty, pickup_date, pickup_time, payment, fulfilment, contact) VALUES ('OD0001', 'SDXH2345', 'Bubble Tea A', 5, '2019-04-17', '12pm - 1pm', 'unpaid', 'fulfilled', 12345678);
 
