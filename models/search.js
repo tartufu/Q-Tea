@@ -8,7 +8,7 @@ module.exports = (dbPoolInstance) => {
   // `dbPoolInstance` is accessible within this function scope
   let getAll = (data,callback) => {
 
-    let query = `SELECT * FROM orders where ref_no = '${data.ref_no}'`;
+    let query = `SELECT * FROM orders where ref_no = '${data}'`;
 
     dbPoolInstance.query(query, (error, queryResult) => {
       if( error ){

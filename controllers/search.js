@@ -19,7 +19,8 @@ module.exports = (db) => {
       // });
 
 
-      let data = request.body;
+      let data = request.body.ref_no.toUpperCase();
+      // data.toUpperCase();
       console.log(data);
 
       db.search.getAll(data,(error,result) =>{
