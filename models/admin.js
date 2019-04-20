@@ -35,7 +35,7 @@ module.exports = (dbPoolInstance) => {
     //CALLS UP LIST OF TASKS AND ORDERS
     let tasks = (callback) => {
 
-    let query = `SELECT * FROM orders`;
+    let query = `SELECT * FROM orders ORDER BY fulfilment DESC, id`;
 
     dbPoolInstance.query(query, (error, queryResult) => {
       if( error ){

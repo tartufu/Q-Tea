@@ -57,11 +57,38 @@ module.exports = (dbPoolInstance) => {
   };
 
 
+      let cancel = (data, callback) => {
+
+    let query = `UPDATE orders SET fulfilment='cancelled' WHERE order_no = '${data.order_no}';`;
+
+    dbPoolInstance.query(query, (error, queryResult) => {
+      if( error ){
+
+        // invoke callback function with results after query has executed
+        callback(error, null);
+
+      }else{
+
+        // invoke callback function with results after query has executed
+
+        if( queryResult.rows.length > 0 ){
+          callback(null, queryResult.rows);
+
+        }else{
+          callback(null, null);
+
+        }
+      }
+    });
+  };
+
+
 
 
   return {
     payment,
-    fulfill
+    fulfill,
+    cancel
     // getAll
   };
 };

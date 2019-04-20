@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS orders (
 	pickup_time TEXT,
 	payment TEXT,
 	fulfilment TEXT,
-	contact INTEGER
+	contact VARCHAR(8)
 );
 
 CREATE TABLE IF NOT EXISTS admin (

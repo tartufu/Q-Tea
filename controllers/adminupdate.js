@@ -35,12 +35,19 @@ module.exports = (db) => {
               });
 
         } else if (data.fulfilment === 'void') {
-            response.send("WEDCVBJHGFC BN");
-        }
+            // response.send("WEDCVBJHGFC BN");
 
+              db.adminupdate.cancel(data, (error, result) => {
+                // console.log(result[0]);
+                console.log(data.order_no);
+                let thing = {ccb : result}
+                console.log(thing);
+                // response.redirect('tasks');
+                response.redirect('tasks');
+                console.log(request.body);
+              });
 
-
-
+        };
 
   };
 

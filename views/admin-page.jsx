@@ -7,7 +7,7 @@ class Login extends React.Component {
     let orders = this.props.ccb.map (order => {
         return <div>
         <tr>
-      <th scope="row">{order.order_no} </th>
+      <th scope="row">{order.id} </th>
       <td>{order.ref_no}</td>
       <td>{order.order_detail}</td>
       <td>{order.qty}</td>

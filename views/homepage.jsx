@@ -95,7 +95,15 @@ class Home extends React.Component {
 
               <div class="form-group">
                 <label for="exampleFormControlInput1">Contact Number</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="contact" required/>
+                    <div class="form-row">
+                      <div class="col-1">
+                        <input type="text" class="form-control" value="+65" readonly/>
+                      </div>
+
+                      <div class="col-11">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" name="contact" maxlength='8' minlength='8' required/>
+                      </div>
+                    </div>
               </div>
 
                 <input type="text" class="form-control" name="payment" value="unpaid" hidden/>
