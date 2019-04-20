@@ -16,4 +16,4 @@ INSERT INTO orders (order_no, ref_no, order_detail, qty, pickup_date, pickup_tim
 
 UPDATE orders SET payment='paid' WHERE order_no = 'OD0004';
 
-COPY orders TO 'Users/changhaoteo/Desktop/wdi-sg/tea-excel/tea-excel.csv' DELIMITER ',' CSV HEADER;
+-- COPY orders TO 'Users/changhaoteo/Desktop/wdi-sg/tea-excel/tea-excel.csv' DELIMITER ',' CSV HEADER;

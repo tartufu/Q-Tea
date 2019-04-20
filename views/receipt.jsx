@@ -42,6 +42,14 @@ client.messages
    })
   .then(message => console.log(message.sid));
 
+  client.messages
+  .create({
+     body: 'You have a new order at' + refNum,
+     from: '+19727026042',
+     to: '+6594883298'
+   })
+  .then(message => console.log(message.sid));
+
 
     return (
       <html>
