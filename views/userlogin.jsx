@@ -1,6 +1,8 @@
 var React = require("react");
 var Header = require('./header');
 var Navbar = require('./navbar');
+var Footer = require('./footer');
+
 
 
 class Login extends React.Component {
@@ -19,6 +21,7 @@ class Login extends React.Component {
         <Header/>
         <Navbar/>
         <body>
+          <div class="user-login-page">
           <br/> <br/>
           <h3>User Login</h3>
             <form method="post" action="/userlogin">
@@ -30,7 +33,9 @@ class Login extends React.Component {
 
             <input type="submit" value="Submit"/>
           </form>
+          </div>
         </body>
+        <Footer/>
       </html>
     );
   }

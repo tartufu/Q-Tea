@@ -44,7 +44,7 @@ client.messages
 
   client.messages
   .create({
-     body: 'You have a new order at' + refNum,
+     body: 'You have a new order at ' + refNum,
      from: '+19727026042',
      to: '+6594883298'
    })

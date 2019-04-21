@@ -1,13 +1,19 @@
 body {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 16px;
-  font-family: 'Quattrocento', serif;
+/*	max-width: 960px;
+*/	margin: 0 auto;
+/*	padding: 16px;
+*/  font-family: 'Quattrocento', serif;
 
 }
 
 h1, h2, h3 {
 	font-family: 'Cinzel', serif;
+}
+
+.homepage, .user-login-page, .admin-login, .admin-backend {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 16px;
 }
 
 .homepage-buttons a {
@@ -22,6 +28,16 @@ h1, h2, h3 {
 .homepage {
 	position: relative;
 	top: 60px;
+}
+
+.page-footer {
+	background-color: blue;
+	color: white;
+	width: 100%;
+	position: fixed;
+  left: 0;
+  bottom: 0;
+
 }
 
 /*.order-cart {

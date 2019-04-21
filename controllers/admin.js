@@ -45,7 +45,7 @@ module.exports = (db) => {
 
         console.log(request.cookies);
         if (request.cookies.loggedin) {
-            console.log("LOLOKLOLC");
+            console.log("USER LOGGED IN");
             db.admin.tasks((error, result) => {
 
                 let data = { ccb: result }
@@ -54,7 +54,6 @@ module.exports = (db) => {
           });
         } else {
                     response.send("ERROR");
-
         }
 
 

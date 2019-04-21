@@ -1,6 +1,7 @@
 var React = require("react");
 var Header = require('./header');
 var Navbar = require('./navbar');
+var Footer = require('./footer');
 
 
 var randomstring = require("randomstring");
@@ -25,14 +26,6 @@ console.log(refNum);
 class Home extends React.Component {
   render() {
 
-    // let tweets = this.props.ccb.map(tweet => {
-    //                           return <div>
-    //                           <h3>User Id {tweet.user_id}</h3>
-    //                           <p>{tweet.username}</p>
-    //                           <p>{tweet.tweets}</p>
-    //                           </div>
-    //                         });
-
     let username = this.props.username;
     let loginGreeting = `What would you like to have today?`;
 
@@ -47,10 +40,7 @@ class Home extends React.Component {
           <Navbar />
           <div class="homepage">
               <h1 class="text-center">Q-Tea</h1>
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p> Skip the hassle of 20 min queue times! Just key in your order at the form below and drop by during your pickup timeslot and collect your orders with minimal waiting!</p>
 
               <hr/>
 
@@ -125,10 +115,15 @@ class Home extends React.Component {
 
               <button type="submit" class="btn btn-primary">Submit</button>
 
-            </form>
+            </form> <br/> <br/> <br/>
+
 
           </div>
+
         </body>
+
+          <Footer/>
+
       </html>
     );
   }

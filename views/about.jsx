@@ -1,6 +1,8 @@
 var React = require("react");
 var Header = require('./header');
 var Navbar = require('./navbar');
+var Footer = require('./footer');
+
 
 class About extends React.Component {
   render() {
@@ -39,6 +41,7 @@ class About extends React.Component {
 
           </div>
         </body>
+        <Footer/>
       </html>
     );
   }

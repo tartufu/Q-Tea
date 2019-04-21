@@ -43,6 +43,7 @@ class Login extends React.Component {
       <html>
         <Header/>
         <body>
+        <div class="admin-backend">
           <h3>Admin BACKEND AND LIST OF TASKS!</h3>
 
           <form method="POST" action="/admin/update">
@@ -70,32 +71,26 @@ class Login extends React.Component {
 
           <br/>
 
-<table class="table table-striped">
-  <thead class="thead-dark ">
-    <tr>
-      <th scope="col">Order</th>
-      <th scope="col">Ref No</th>
-      <th scope="col">Order Detail</th>
-      <th scope="col">Qty</th>
-      <th scope="col">Pickup Date</th>
-      <th scope="col">Pickup Time</th>
-      <th scope="col">Payment</th>
-      <th scope="col">Fulfilment</th>
-      <th scope="col">Contact</th>
-    </tr>
-  </thead>
-  <tbody>
-          {orders}
-  </tbody>
-</table>
+            <table class="table table-striped">
+              <thead class="thead-dark ">
+                <tr>
+                  <th scope="col">Order</th>
+                  <th scope="col">Ref No</th>
+                  <th scope="col">Order Detail</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Pickup Date</th>
+                  <th scope="col">Pickup Time</th>
+                  <th scope="col">Payment</th>
+                  <th scope="col">Fulfilment</th>
+                  <th scope="col">Contact</th>
+                </tr>
+              </thead>
+              <tbody>
+                      {orders}
+              </tbody>
+            </table>
 
-
-
-
-
-
-
-
+        </div>
         </body>
       </html>
     );
