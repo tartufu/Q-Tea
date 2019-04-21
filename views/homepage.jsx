@@ -115,10 +115,17 @@ class Home extends React.Component {
 
               <button type="submit" class="btn btn-primary">Submit</button>
 
-            </form> <br/> <br/> <br/>
+            </form>
+
+          <br/> <br/>
+
+
 
 
           </div>
+
+
+
 
         </body>
 
@@ -211,4 +218,11 @@ module.exports = Home;
 
             //   <button type="submit" class="btn btn-primary">Submit</button>
 
+            // </form>
+
+
+            //             <form method="POST" action="/test">
+            // <input type="text" name="test1" value="test2" hidden="hidden"/>
+            // <input type="image" src="/images/checked.png"/>
+            // <p> TEST</p>
             // </form>

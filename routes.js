@@ -30,7 +30,12 @@ module.exports = (app, allModels) => {
 
   // THIS ROUTE UPDATES FROM BACKEND
   const adminUpdateCallbacks = require('./controllers/adminupdate') (allModels);
-  app.post('/admin/update', adminUpdateCallbacks.index);
+  // app.post('/admin/update', adminUpdateCallbacks.index);
+  app.post('/admin/payment', adminUpdateCallbacks.payment);
+  app.post('/admin/nopayment', adminUpdateCallbacks.noPayment);
+  app.post('/admin/fulfill', adminUpdateCallbacks.fulfill);
+  app.post('/admin/cancel', adminUpdateCallbacks.cancel);
+
 
   // THIS ROUTE SHOWS YOUR ORDER
   const orderSearchCallbacks = require('./controllers/search') (allModels);
@@ -59,4 +64,7 @@ module.exports = (app, allModels) => {
   const userLoginCallbacks = require('./controllers/userlogin') (allModels);
   app.get('/userlogin', userLoginCallbacks.index);
   app.post('/userlogin', userLoginCallbacks.verify);
+
+  const testCallbacks = require('./controllers/test') (allModels);
+  app.post('/test', testCallbacks.index);
 };

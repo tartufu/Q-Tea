@@ -1,6 +1,7 @@
 var React = require("react");
 var Header = require('./header');
 var Navbar = require('./Navbar');
+var Footer = require('./footer');
 
 class Login extends React.Component {
   render() {
@@ -41,12 +42,14 @@ class Login extends React.Component {
         <Header/>
         <Navbar/>
         <body>
+          <div class="search-page">
           <br/><br/>
           <h3> ORDER STATUS </h3>
           <p> {errorMsg} </p>
           {orderSearch()}
-
+          </div>
         </body>
+        <Footer/>
       </html>
     );
   }

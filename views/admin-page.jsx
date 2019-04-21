@@ -1,6 +1,8 @@
 var React = require("react");
 var Header = require('./header');
 
+// <input type="button"/>
+
 class Login extends React.Component {
   render() {
 
@@ -8,13 +10,53 @@ class Login extends React.Component {
         return <div>
         <tr>
       <th scope="row">{order.id} </th>
-      <td>{order.ref_no}</td>
+      <td>{order.ref_no} </td>
       <td>{order.order_detail}</td>
       <td>{order.qty}</td>
       <td>{order.pickup_date.toDateString()}</td>
       <td>{order.pickup_time}</td>
-      <td>{order.payment}</td>
-      <td>{order.fulfilment}</td>
+
+
+      <td>{order.payment}
+          <div class="row">
+            <div class="col-4">
+              <form method="POST" action="/admin/payment">
+                <input type="text" name="id" value={order.id} hidden="hidden"/>
+                <input type="text" name="payment" value="paid" hidden="hidden"/>
+                <input type="image" src="/images/checked.png"/>
+              </form>
+            </div>
+
+            <div class="col-4">
+              <form method="POST" action="/admin/nopayment">
+                <input type="text" name="id" value={order.id} hidden="hidden"/>
+                <input type="image" src="/images/cancel.png"/>
+              </form>
+            </div>
+          </div>
+
+      </td>
+
+
+      <td>{order.fulfilment}
+        <div class="row">
+            <div class="col-4">
+            <form method="POST" action="/admin/fulfill">
+            <input type="text" name="id" value={order.id} hidden="hidden"/>
+            <input type="image" src="/images/checked.png"/>
+            </form>
+            </div>
+
+            <div class="col-4">
+            <form method="POST" action="/admin/cancel">
+            <input type="text" name="id" value={order.id} hidden="hidden"/>
+            <input type="image" src="/images/cancel.png"/>
+            </form>
+            </div>
+        </div>
+      </td>
+
+
       <td>{order.contact}</td>
     </tr>
 
