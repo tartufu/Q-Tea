@@ -17,44 +17,10 @@ class Login extends React.Component {
       <td>{order.pickup_time}</td>
 
 
-      <td>{order.payment}
-          <div class="row">
-            <div class="col-4">
-              <form method="POST" action="/admin/payment">
-                <input type="text" name="id" value={order.id} hidden="hidden"/>
-                <input type="text" name="payment" value="paid" hidden="hidden"/>
-                <input type="image" src="/images/checked.png"/>
-              </form>
-            </div>
-
-            <div class="col-4">
-              <form method="POST" action="/admin/nopayment">
-                <input type="text" name="id" value={order.id} hidden="hidden"/>
-                <input type="image" src="/images/cancel.png"/>
-              </form>
-            </div>
-          </div>
-
-      </td>
+      <td>{order.payment} </td>
 
 
-      <td>{order.fulfilment}
-        <div class="row">
-            <div class="col-4">
-            <form method="POST" action="/admin/fulfill">
-            <input type="text" name="id" value={order.id} hidden="hidden"/>
-            <input type="image" src="/images/checked.png"/>
-            </form>
-            </div>
-
-            <div class="col-4">
-            <form method="POST" action="/admin/cancel">
-            <input type="text" name="id" value={order.id} hidden="hidden"/>
-            <input type="image" src="/images/cancel.png"/>
-            </form>
-            </div>
-        </div>
-      </td>
+      <td>{order.fulfilment}    </td>
 
 
       <td>{order.contact}</td>
@@ -86,8 +52,8 @@ class Login extends React.Component {
         <Header/>
         <body>
         <div class="admin-backend">
-          <h3>Admin BACKEND AND LIST OF TASKS!</h3>
-            <a href="/admin/master"><button type="button" class="btn btn-primary">Master List</button></a>
+          <h3>Admin Masterlist!</h3>
+            <a href="/admin/tasks"><button type="button" class="btn btn-primary">Pending Tasks</button></a>
           <br/>
 
             <table class="table table-striped">

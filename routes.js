@@ -27,6 +27,7 @@ module.exports = (app, allModels) => {
   // THIS ROUTE IS THE ADMIN BACKEND PAGE
   const adminPageCallbacks = require('./controllers/admin') (allModels);
   app.get('/admin/tasks', adminPageCallbacks.adminpage);
+  app.get('/admin/master', adminPageCallbacks.masterlist);
 
   // THIS ROUTE UPDATES FROM BACKEND
   const adminUpdateCallbacks = require('./controllers/adminupdate') (allModels);

@@ -56,7 +56,19 @@ module.exports = (db) => {
                     response.send("ERROR");
         }
 
+  };
 
+    let adminMasterControllerCallback = (request, response) => {
+
+        if (request.cookies.loggedin) {
+        db.admin.masterlist((error, result) => {
+                let data = { ccb: result }
+                response.render('admin-master', data);
+          });
+        } else {
+            response.send("ERROR");
+        }
+      // });
   };
 
   /**
@@ -67,7 +79,8 @@ module.exports = (db) => {
   return {
     index: adminLoginControllerCallback,
     verify: adminVerifyControllerCallback,
-    adminpage: adminPageControllerCallback
+    adminpage: adminPageControllerCallback,
+    masterlist: adminMasterControllerCallback
   };
 
 }

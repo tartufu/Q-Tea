@@ -1,6 +1,5 @@
 CREATE TABLE IF NOT EXISTS orders (
 	id SERIAL PRIMARY KEY,
-	order_no TEXT,
 	ref_no TEXT,
 	order_detail TEXT,
 	qty INTEGER,
