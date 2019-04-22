@@ -7,7 +7,6 @@ var randomstring = require("randomstring");
 class Home extends React.Component {
   render() {
 
-
     var testString = randomstring.generate({
       length: 4,
       charset: 'alphabetic'
