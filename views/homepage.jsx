@@ -2,16 +2,16 @@ var React = require("react");
 var Header = require('./header');
 var Navbar = require('./navbar');
 var Footer = require('./footer');
-
-
 var randomstring = require("randomstring");
+
+
 var testString = randomstring.generate({
   length: 4,
   charset: 'alphabetic'
 });
 
 var testNumber = randomstring.generate({
-  length: 4,
+  length: 3,
   charset: 'numeric'
 });
 
