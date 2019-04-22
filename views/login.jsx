@@ -29,7 +29,7 @@ class Login extends React.Component {
             <label for="id" class="mr-2">Password</label>
             <input type="password" name="password" class="mr-2"/>
 
-            <button type="submit" class="btn submit-button">Submit Enquiry</button>
+            <button type="submit" class="btn submit-button">Login</button>
 
           </form>
           </div>

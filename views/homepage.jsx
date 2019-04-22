@@ -11,7 +11,7 @@ var testString = randomstring.generate({
 });
 
 var testNumber = randomstring.generate({
-  length: 3,
+  length: 4,
   charset: 'numeric'
 });
 
