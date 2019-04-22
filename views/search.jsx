@@ -1,6 +1,6 @@
 var React = require("react");
 var Header = require('./header');
-var Navbar = require('./Navbar');
+var Navbar = require('./navbar');
 var Footer = require('./footer');
 
 class Login extends React.Component {
