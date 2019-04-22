@@ -52,7 +52,7 @@ class Login extends React.Component {
         <Header/>
         <body>
         <div class="admin-backend">
-          <h3>Admin Masterlist!</h3>
+          <h3>Admin Masterlist</h3>
             <a href="/admin/tasks"><button type="button" class="btn btn-primary">Pending Tasks</button></a>
           <br/>
 

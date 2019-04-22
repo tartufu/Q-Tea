@@ -1,8 +1,10 @@
-    var React = require("react");
+var React = require("react");
 var Header = require('./header');
 var Navbar = require('./navbar');
+var Footer = require('./footer');
 
-class Home extends React.Component {
+
+class Formorder extends React.Component {
   render() {
 
     let refNum = this.props.ref_no;
@@ -54,9 +56,10 @@ class Home extends React.Component {
 
           </div>
         </body>
+        <Footer/>
       </html>
     );
   }
 }
 
-module.exports = Home;
+module.exports = Formorder;

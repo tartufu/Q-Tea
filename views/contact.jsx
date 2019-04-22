@@ -21,22 +21,30 @@ class Contact extends React.Component {
           <Navbar />
           <div class="homepage">
               <h1 class="text-center">Contact Us</h1>
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p> Ordering for large corporate events or just have suggestions on how we can improve? Just fill up the form below and our staff will get in touch with you within 2 working days!</p>
 
-              <hr/>
+            <form action="https://formspree.io/edmundteochanghao@gmail.com" method="POST">
+            <div class="form-group">
+                <label for="contact-name">Contact Name</label>
+                <input type='text' class="form-control" name="name" placeholder="Claudia Chin"/>
 
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <label for="email">Email Address</label>
+                <input type='text' class="form-control" name="email" placeholder="smalltowngirl@email.com"/>
 
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <label for="phone">Phone Number</label>
+                <input type='text' class="form-control" name="phone" placeholder="62410241"/>
+
+                <label for="subject">Subject Title</label>
+                <input type='text' class="form-control" name="subject" placeholder="Party Order"/>
+
+                <label for="subject">Message</label>
+                <textarea class="form-control" rows="5" name="message"></textarea>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+
+            </form>
+            <br/><br/>
 
           </div>
         </body>

@@ -8,7 +8,7 @@ class Header extends React.Component {
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
                 <link href="https://fonts.googleapis.com/css?family=Cinzel|Quattrocento" rel="stylesheet"/>
                 <link rel="stylesheet" href="/style.css"></link>
-                <link rel="shortcut icon" href="images/fruits.png" type="images/fruits.png"/>
+                <link rel="shortcut icon" href="images/two-tea-leaves.png" type="images/two-tea-leaves.png"/>
                 <title>Q-Tea</title>
 
 

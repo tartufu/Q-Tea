@@ -86,7 +86,7 @@ class Login extends React.Component {
         <Header/>
         <body>
         <div class="admin-backend">
-          <h3>Admin BACKEND AND LIST OF TASKS!</h3>
+          <h3>Admin BACKEND AND LIST OF TASKS</h3>
             <a href="/admin/master"><button type="button" class="btn btn-primary">Master List</button></a>
           <br/>
 
