@@ -22,6 +22,7 @@ module.exports = (db) => {
             username: request.body.username,
             password: request.body.password
         };
+    //    console.log("")
 
         //THIS SECTION VERIFIES ID ADMIN LOGIN IS CORRECT
         db.admin.getAll(data,(error, result) => {

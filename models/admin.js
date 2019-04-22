@@ -8,6 +8,7 @@ module.exports = (dbPoolInstance) => {
   // `dbPoolInstance` is accessible within this function scope
   let getAll = (data,callback) => {
 
+    console.log("model from",data)
     let query = `SELECT * FROM admin WHERE username='${data.username}' AND password='${data.password}'`;
 
     dbPoolInstance.query(query, (error, queryResult) => {
