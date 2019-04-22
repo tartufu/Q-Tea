@@ -47,6 +47,47 @@ class Home extends React.Component {
               <h2 class="text-center"> {loginGreeting}</h2>
 
 
+              <div class="bd-example">
+              <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/boba3.png" class="d-block w-100" alt="..."/>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/boba1.png" class="d-block w-100" alt="..."/>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/boba2.png" class="d-block w-100" alt="..."/>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+            <br/>
             <h2 class="text-center">Bubble Tea Order Form</h2>
             <form method="POST" action="/formorder">
               <div class="form-group">
@@ -110,10 +151,10 @@ class Home extends React.Component {
 
 
               <div>
-                <p> For large orders please contact us <a href="/contact">here</a> or drop us a text at +65 9123 4567!</p>
+                <p> For large orders please contact us <a href="/contact" class="contact-button">here</a> or drop us a text at +65 9123 4567!</p>
               </div>
 
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn submit-button">Submit</button>
 
             </form>
 

@@ -23,13 +23,14 @@ class Login extends React.Component {
           <br/> <br/>
           <h3>Admin Login</h3>
             <form method="post" action="/admin">
-            <label for="id">Username</label>
-            <input type="text" name="username"/>
+            <label for="id" class="mr-2">Username</label>
+            <input type="text" name="username" class="mr-2"/>
 
-            <label for="id">Password</label>
-            <input type="password" name="password"/>
+            <label for="id" class="mr-2">Password</label>
+            <input type="password" name="password" class="mr-2"/>
 
-            <input type="submit" value="Submit"/>
+            <button type="submit" class="btn submit-button">Submit Enquiry</button>
+
           </form>
           </div>
         </body>

@@ -26,22 +26,22 @@ class Contact extends React.Component {
             <form action="https://formspree.io/edmundteochanghao@gmail.com" method="POST">
             <div class="form-group">
                 <label for="contact-name">Contact Name</label>
-                <input type='text' class="form-control" name="name" placeholder="Claudia Chin"/>
+                <input type='text' class="form-control" name="name" placeholder="Claudia Chin" required/>
 
                 <label for="email">Email Address</label>
-                <input type='text' class="form-control" name="email" placeholder="smalltowngirl@email.com"/>
+                <input type='text' class="form-control" name="email" placeholder="smalltowngirl@email.com" required/>
 
                 <label for="phone">Phone Number</label>
-                <input type='text' class="form-control" name="phone" placeholder="62410241"/>
+                <input type='number' class="form-control" name="phone" placeholder="62410241"/>
 
                 <label for="subject">Subject Title</label>
                 <input type='text' class="form-control" name="subject" placeholder="Party Order"/>
 
                 <label for="subject">Message</label>
-                <textarea class="form-control" rows="5" name="message"></textarea>
+                <textarea class="form-control" rows="5" name="message" required></textarea>
 
             </div>
-            <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+            <button type="submit" class="btn submit-button">Submit Enquiry</button>
 
             </form>
             <br/><br/>

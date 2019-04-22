@@ -1,5 +1,5 @@
 var React = require("react");
-var Header = require('./header');
+var AdminHeader = require('./adminheader');
 
 // <input type="button"/>
 
@@ -83,7 +83,7 @@ class Login extends React.Component {
 
     return (
       <html>
-        <Header/>
+        <AdminHeader/>
         <body>
         <div class="admin-backend">
           <h3>Admin BACKEND AND LIST OF TASKS</h3>
